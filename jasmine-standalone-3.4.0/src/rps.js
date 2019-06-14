@@ -7,13 +7,13 @@ function RockPaperScissors() {
 
   this.outcome;
 }
-debugger
+
 RockPaperScissors.prototype.play = function(playerChoice, computerChoice) {
 
       if (playerChoice == computerChoice){
         this.outcome = "It's a draw"
       } else if (this.winConditions[playerChoice] == computerChoice){
-        "Congatulations, you win!"
+        this.outcome = "Congatulations, you win!"
       } else {
         this.outcome = "You lose!"
       }
@@ -30,12 +30,14 @@ r = new RockPaperScissors();
 
 p = new RockPaperScissors();
 {
-  console.log("expect to draw")
-  console.log(p.play("paper", "paper"));
+  console.log("expect a draw")
+  p.play("scissors", "scissors");
+  console.log(p.outcome);
 }
-
+debugger
 s = new RockPaperScissors();
 {
   console.log("expect to win")
-  console.log(s.play("scissors", "paper"));
+  s.play("rock", "scissors");
+  console.log(s.outcome);
 }
