@@ -34,7 +34,7 @@ p = new RockPaperScissors();
   p.play("scissors", "scissors");
   console.log(p.outcome);
 }
-debugger
+
 s = new RockPaperScissors();
 {
   console.log("expect to win")

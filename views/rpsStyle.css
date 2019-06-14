@@ -1,0 +1,9 @@
+img {
+  width: 20vmax;
+  border-radius: 50%;
+
+}
+button {
+  border-radius: 50%;
+  border: 1px solid hotpink;
+}
