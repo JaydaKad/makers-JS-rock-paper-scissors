@@ -4,13 +4,12 @@ function RockPaperScissors() {
                         'paper': 'rock',
                         'scissors': 'paper'
                         };
-
   this.outcome;
+  this.computerChoice;
 
 }
 
 RockPaperScissors.prototype.play = function(playerChoice, computerChoice) {
-
       if (playerChoice == computerChoice){
         this.outcome = "It's a draw"
       } else if (this._winConditions[playerChoice] == computerChoice){
@@ -18,7 +17,6 @@ RockPaperScissors.prototype.play = function(playerChoice, computerChoice) {
       } else {
         this.outcome = "You lose!"
       }
-
 };
 
 
