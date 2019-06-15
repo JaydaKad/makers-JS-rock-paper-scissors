@@ -2,17 +2,23 @@ $(document).ready(function() {
   var rps = new RockPaperScissors();
 
   $('#rock').click(function(){
-    rps.play("rock", "paper");
-    $('#outcome').text(rps.outcome);
+    rps.playerChoice = "rock";
   });
+
   $('#paper').click(function(){
-    rps.play("paper", "paper");
-    $('#outcome').text(rps.outcome);
+    rps.playerChoice = "paper";
   });
+
   $('#scissors').click(function(){
-    rps.play("scissors", "paper");
+    rps.playerChoice = "scissors";
+  });
+
+  $('#play').click(function(){
+    rps.randomComputerSelection();
+    rps.play();
     $('#outcome').text(rps.outcome);
   });
+
 });
 
 
