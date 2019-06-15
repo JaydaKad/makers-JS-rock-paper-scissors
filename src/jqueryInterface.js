@@ -3,20 +3,25 @@ $(document).ready(function() {
 
   $('#rock').click(function(){
     rps.playerChoice = "rock";
+  $('#rock').css({"background-color":"black"});
+  $('#player-choice').text("You chose: " + rps.playerChoice);
   });
 
   $('#paper').click(function(){
     rps.playerChoice = "paper";
+  $('#paper').css({"background-color":"black"});
+  $('#player-choice').text("You chose: " + rps.playerChoice);
   });
 
   $('#scissors').click(function(){
     rps.playerChoice = "scissors";
+    $('#scissors').css({"background-color":"black"});
+    $('#player-choice').text("You chose: " + rps.playerChoice);
   });
 
   $('#play').click(function(){
     rps.randomComputerSelection();
     rps.play(rps.playerChoice, rps.computerChoice);
-    $('#player-choice').text("You chose: " + rps.playerChoice);
     $('#computer-choice').text("The computer chose: " + rps.computerChoice);
     $('#outcome').text(rps.outcome);
   });
