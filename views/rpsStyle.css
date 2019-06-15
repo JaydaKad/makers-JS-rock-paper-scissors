@@ -7,3 +7,10 @@ button {
   border-radius: 50%;
   border: 1px solid hotpink;
 }
+
+button:hover {
+  border-radius: 50%;
+  border: 1px solid hotpink;
+  background: black;
+  color: white;
+}

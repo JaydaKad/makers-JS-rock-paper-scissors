@@ -6,7 +6,7 @@ function RockPaperScissors() {
                         };
   this.outcome;
   this.computerChoice;
-
+  this.playerChoice;
 }
 
 RockPaperScissors.prototype.play = function(playerChoice, computerChoice) {
@@ -28,25 +28,27 @@ RockPaperScissors.prototype.randomComputerSelection = function() {
 
 r = new RockPaperScissors();
 {
-  console.log("expect to lose");
-  r.randomComputerSelection()
+  console.log('-----');
+  r.randomComputerSelection();
   console.log(r.computerChoice);
-  r.play("rock", "paper");
+  r.play("rock", r.computerChoice);
   console.log(r.outcome);
-
 }
 
 p = new RockPaperScissors();
 {
-  console.log("expect a draw")
-  console.log(p.randomComputerSelection())
-  p.play("scissors", "scissors");
+  console.log('-----');
+  p.randomComputerSelection()
+  console.log(p.computerChoice);
+  p.play("rock", p.computerChoice);
   console.log(p.outcome);
 }
 
 s = new RockPaperScissors();
 {
-  console.log("expect to win")
-  s.play("rock", "scissors");
+  console.log('-----');
+  s.randomComputerSelection()
+  console.log(s.computerChoice);
+  s.play("rock", s.computerChoice);
   console.log(s.outcome);
 }

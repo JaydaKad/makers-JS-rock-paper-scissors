@@ -15,7 +15,9 @@ $(document).ready(function() {
 
   $('#play').click(function(){
     rps.randomComputerSelection();
-    rps.play();
+    rps.play(rps.playerChoice, rps.computerChoice);
+    $('#player-choice').text("You chose: " + rps.playerChoice);
+    $('#computer-choice').text("The computer chose: " + rps.computerChoice);
     $('#outcome').text(rps.outcome);
   });
 
