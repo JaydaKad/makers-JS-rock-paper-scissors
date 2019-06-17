@@ -1,16 +1,32 @@
 img {
   width: 20vmax;
   border-radius: 50%;
-
 }
+
 button {
   border-radius: 50%;
   border: 1px solid hotpink;
 }
+
+.buttons{
+  text-align: center;
+}
+
+
 
 button:hover {
   border-radius: 50%;
   border: 1px solid hotpink;
   background: black;
   color: white;
+}
+
+h2{
+  text-align: center;
+}
+#play {
+  width: 30vmax;
+  height: inherit;
+  font-size: 5vmax;
+
 }
